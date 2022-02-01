@@ -27,4 +27,11 @@ stages:
         npm install
         npm run build
         npm test
-      displayName: 'npm install, build, and test'
+      displayName: 'npm install and build'
+- stage: testCalculator
+  jobs:
+  - job: test
+    steps:
+    - script: |
+        npm test
+      displayName: 'npm test'
